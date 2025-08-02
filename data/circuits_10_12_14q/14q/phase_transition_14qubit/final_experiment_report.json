@@ -1,0 +1,66 @@
+{
+  "experiment_summary": {
+    "n_qubits": 14,
+    "n_circuits": 100,
+    "compression_ratio": 0.08,
+    "threshold": 0.9,
+    "timestamp": "2025-07-29T20:33:52.355677"
+  },
+  "bimodal_classification": {
+    "robust_count": 63,
+    "robust_percentage": 63.0,
+    "fragile_count": 37,
+    "fragile_percentage": 37.0
+  },
+  "fidelity_statistics": {
+    "overall_mean": 0.8622880725080222,
+    "overall_std": 0.17159239376214738,
+    "robust_mean": 0.9720091058317176,
+    "robust_std": 0.018483029497431778,
+    "fragile_mean": 0.6754657725244334,
+    "fragile_std": 0.15360876678151725
+  },
+  "hypothesis_test": {
+    "entropy": {
+      "robust_mean": 5.823542965207628,
+      "robust_std": 0.08522069544150872,
+      "fragile_mean": 5.831085010374691,
+      "fragile_std": 0.09992201376296815,
+      "p_value": 0.5678992112140974,
+      "effect_size": -0.08210292759605159,
+      "difference": -0.007542045167062916
+    },
+    "concentration_ratio": {
+      "robust_mean": 0.5488044856301276,
+      "robust_std": 0.0378289685797492,
+      "fragile_mean": 0.5494537105366261,
+      "fragile_std": 0.03718853707066926,
+      "p_value": 0.9487678461252528,
+      "effect_size": -0.017096136818424607,
+      "difference": -0.0006492249064984357
+    },
+    "gini_coefficient": {
+      "robust_mean": 0.634701879183838,
+      "robust_std": 0.024720821030481132,
+      "fragile_mean": 0.6311040809802758,
+      "fragile_std": 0.026703068432061272,
+      "p_value": 0.4239382801459767,
+      "effect_size": 0.13982432749604287,
+      "difference": 0.003597798203562208
+    },
+    "uniformity_index": {
+      "robust_mean": 0.3133832976536979,
+      "robust_std": 0.015175722425580214,
+      "fragile_mean": 0.31474558601097574,
+      "fragile_std": 0.020228165270221046,
+      "p_value": 0.9772175814817787,
+      "effect_size": -0.07832122356213991,
+      "difference": -0.0013622883572778632
+    }
+  },
+  "bimodal_separation": {
+    "gap": 0.015448433078501633,
+    "min_robust": 0.909536642568811,
+    "max_fragile": 0.8940882094903093
+  }
+}

@@ -1,0 +1,68 @@
+=== PARAMETER MICROSCOPE ANALYSIS REPORT ===
+HYPOTHESIS: 'Parameter values determine circuit fragility'
+
+Total circuits analyzed: 100
+Robust circuits: 72
+Fragile circuits: 28
+
+=== MAIN PARAMETER HYPOTHESES ===
+1. Parameter Mean:
+   Robust:  0.7796 ± 0.0248
+   Fragile: 0.8028 ± 0.0218
+   Difference: +0.0232
+   P-value: 0.000042 (SIGNIFICANT)
+
+2. Parameter Variability:
+   Robust:  0.5194 ± 0.0108
+   Fragile: 0.5111 ± 0.0111
+   Difference: -0.0082
+   P-value: 0.001164 (SIGNIFICANT)
+
+3. Small Parameter Ratio:
+   Robust:  0.2630 ± 0.0202
+   Fragile: 0.2409 ± 0.0194
+   Difference: -0.0220
+   P-value: 0.000004 (SIGNIFICANT)
+
+=== GATE-TYPE SPECIFIC ANALYSIS ===
+
+RX Gates:
+   Robust:  0.7804 ± 0.5160 (8658 params)
+   Fragile: 0.8100 ± 0.5080 (3398 params)
+   T-test p-value: 0.004470
+   KS-test p-value: 0.030881
+
+RY Gates:
+   Robust:  0.7828 ± 0.5182 (8587 params)
+   Fragile: 0.8147 ± 0.5070 (3369 params)
+   T-test p-value: 0.002343
+   KS-test p-value: 0.000234
+
+RZ Gates:
+   Robust:  0.7758 ± 0.5258 (8891 params)
+   Fragile: 0.7838 ± 0.5195 (3397 params)
+   T-test p-value: 0.445733
+   KS-test p-value: 0.618510
+
+=== EXTREME PARAMETER CASES ===
+Highest Parameter Variability:
+   1. circuit_045_robust (robust): std=0.5413, fidelity=0.9847
+   2. circuit_094_robust (robust): std=0.5388, fidelity=0.9849
+   3. circuit_049_robust (robust): std=0.5376, fidelity=0.9852
+Lowest Parameter Variability:
+   1. circuit_078_fragile (fragile): std=0.4904, fidelity=0.7342
+   2. circuit_041_fragile (fragile): std=0.4930, fidelity=0.7335
+   3. circuit_006_fragile (fragile): std=0.4952, fidelity=0.5648
+
+=== MOST SIGNIFICANT FINDINGS ===
+Statistically significant differences found:
+   small_param_ratio: p=0.000004, diff=-0.0220
+   param_skewness: p=0.000031, diff=-0.0677
+   param_mean: p=0.000042, diff=+0.0232
+   param_std: p=0.001164, diff=-0.0082
+   param_entropy: p=0.004074, diff=+0.0416
+
+=== CONCLUSION ===
+PARAMETER HYPOTHESIS PARTIALLY CONFIRMED:
+Some parameter characteristics show significant differences.
+The fragility mechanism may involve specific parameter patterns.

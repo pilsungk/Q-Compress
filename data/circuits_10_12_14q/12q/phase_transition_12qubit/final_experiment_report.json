@@ -1,0 +1,66 @@
+{
+  "experiment_summary": {
+    "n_qubits": 12,
+    "n_circuits": 100,
+    "compression_ratio": 0.09,
+    "threshold": 0.9,
+    "timestamp": "2025-07-28T12:21:31.042223"
+  },
+  "bimodal_classification": {
+    "robust_count": 72,
+    "robust_percentage": 72.0,
+    "fragile_count": 28,
+    "fragile_percentage": 28.000000000000004
+  },
+  "fidelity_statistics": {
+    "overall_mean": 0.9065676596070726,
+    "overall_std": 0.13667773599396657,
+    "robust_mean": 0.9803314203318736,
+    "robust_std": 0.013563675082240415,
+    "fragile_mean": 0.7168894177432988,
+    "fragile_std": 0.12757298059830247
+  },
+  "hypothesis_test": {
+    "entropy": {
+      "robust_mean": 5.249487769816771,
+      "robust_std": 0.09586732418494223,
+      "fragile_mean": 5.264970183540563,
+      "fragile_std": 0.10790881400124872,
+      "p_value": 0.598981186217723,
+      "effect_size": -0.15421478457277646,
+      "difference": -0.015482413723792554
+    },
+    "concentration_ratio": {
+      "robust_mean": 0.6038519404990969,
+      "robust_std": 0.0396443499589982,
+      "fragile_mean": 0.6083491001866367,
+      "fragile_std": 0.04227805652945024,
+      "p_value": 0.5621814700295923,
+      "effect_size": -0.11019951216719104,
+      "difference": -0.004497159687539831
+    },
+    "gini_coefficient": {
+      "robust_mean": 0.6734855907816575,
+      "robust_std": 0.02703409028885106,
+      "fragile_mean": 0.6707051700328439,
+      "fragile_std": 0.03102003649403843,
+      "p_value": 0.6700591992065367,
+      "effect_size": 0.09758135258459313,
+      "difference": 0.0027804207488135724
+    },
+    "uniformity_index": {
+      "robust_mean": 0.31278134484215314,
+      "robust_std": 0.015361785915640603,
+      "fragile_mean": 0.31750305642177806,
+      "fragile_std": 0.018899662354818648,
+      "p_value": 0.4005618563378258,
+      "effect_size": -0.2845061825776943,
+      "difference": -0.004721711579624921
+    }
+  },
+  "bimodal_separation": {
+    "gap": 0.03109533941359155,
+    "min_robust": 0.9143168821765786,
+    "max_fragile": 0.883221542762987
+  }
+}
