@@ -21,7 +21,7 @@ To generate the 10-qubit circuit ensemble, run:
 
 ```bash
 python src/phase_transition_pipeline.py --n_qubit 10
-
+```
 This will create an output directory containing the 100 generated circuits. Repeat for n_qubit 12 and 14.
 
 ### Step 2: Run Statistical Analyses
@@ -29,7 +29,7 @@ Once the circuits are generated, run the analysis scripts on the output director
 
 ```bash
 python src/parameter_microscope.py --input_dir <path_to_generated_circuits>
-
+```
 This will analyze the rotation parameter distributions (RX, RY, RZ) and generate the summary data used in the paper.
 
 <!-- 
