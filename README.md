@@ -32,14 +32,15 @@ python src/parameter_microscope.py --input_dir <path_to_generated_circuits>
 ```
 This will analyze the rotation parameter distributions (RX, RY, RZ) and generate the summary data used in the paper.
 
-<!-- 
 ### Citation
 If you find this work useful, please cite our paper:
 
-@article{your_bibtex_key,
-  title="{Emergent Bifurcations in Quantum Circuit Stability from Hidden Parameter Statistics}",
-  author={Pilsung Kang},
-  journal={arXiv preprint arXiv:...},
-  year={2025}
+@misc{kang2025emergentbifurcation,
+      title="{Emergent Bifurcations in Quantum Circuit Stability from Hidden Parameter Statistics}", 
+      author={Pilsung Kang},
+      year={2025},
+      eprint={2508.00484},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph},
+      url={https://arxiv.org/abs/2508.00484}, 
 }
--->
