@@ -25,7 +25,7 @@ def plot_paradoxical_importance(robust_csv_path, fragile_csv_path, output_path='
     plt.rcParams['font.family'] = 'DejaVu Sans'
     
     # Figure creation (1x2 subplot)
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(5, 10))
     
     # colors
     color_robust = '#2E86AB'  # blue
@@ -50,7 +50,7 @@ def plot_paradoxical_importance(robust_csv_path, fragile_csv_path, output_path='
     ax1.set_xlabel('Rotation Angle (θ)', fontsize=13)
     ax1.set_ylabel('Gate Importance', fontsize=13)
     ax1.grid(True, alpha=0.3, linewidth=0.5)
-    ax1.legend(loc='center right', frameon=True, fancybox=False, fontsize=11)
+    ax1.legend(loc='center right', frameon=True, fancybox=False, fontsize=12)
     
     # X range (-0.1 ~ π/2 + 0.1)
     ax1.set_xlim(-0.1, np.pi/2 + 0.1)
@@ -60,7 +60,7 @@ def plot_paradoxical_importance(robust_csv_path, fragile_csv_path, output_path='
         
     # subplot caption (bottom)
     ax1.text(0.5, -0.25, '(a) Representative Robust Circuit', transform=ax1.transAxes, 
-             ha='center', fontsize=14)
+             ha='center', fontsize=14, fontweight='bold')
     
     # (b) Fragile circuit
     x_fragile = df_fragile['rotation_angle']
@@ -89,7 +89,7 @@ def plot_paradoxical_importance(robust_csv_path, fragile_csv_path, output_path='
     
     # subplot caption (bottom)
     ax2.text(0.5, -0.25, '(b) Representative Fragile Circuit', transform=ax2.transAxes, 
-             ha='center', fontsize=14)
+             ha='center', fontsize=14, fontweight='bold')
     
     # Y axis scale (for easy comparison)
     y_max = max(y_robust.max(), y_fragile.max()) * 1.1
@@ -98,7 +98,8 @@ def plot_paradoxical_importance(robust_csv_path, fragile_csv_path, output_path='
     ax2.set_ylim(y_min, y_max)
     
     # layout
-    plt.tight_layout()
+    fig.subplots_adjust(hspace=0.4)
+    #plt.tight_layout()
     
     # statistics 
     print("\n=== Paradoxical Importance Analysis ===")
@@ -116,7 +117,7 @@ def plot_paradoxical_importance(robust_csv_path, fragile_csv_path, output_path='
     
     # save graphs
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
-    plt.savefig(output_path.replace('.pdf', '.png'), dpi=300, bbox_inches='tight')
+    #plt.savefig(output_path.replace('.pdf', '.png'), dpi=300, bbox_inches='tight')
     plt.show()
     
     return {
@@ -181,5 +182,6 @@ if __name__ == "__main__":
     results = plot_paradoxical_importance(robust_csv, fragile_csv)
     
     # additional analysis (option)
-    # analyze_angle_bins(robust_csv, fragile_csv)
+    #analyze_angle_bins(robust_csv, fragile_csv)
+
 

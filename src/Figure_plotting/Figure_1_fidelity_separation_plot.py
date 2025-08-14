@@ -7,7 +7,7 @@ plt.rcParams['axes.linewidth'] = 0.8
 plt.rcParams['font.family'] = 'DejaVu Sans'
 
 # Figure generation
-fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12, 4))
+fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(4,12))
 
 # colors for paper
 color_robust = '#2E86AB'
@@ -114,15 +114,15 @@ ax1.axhspan(0.8983, 0.9225, color=color_gap, alpha=0.7, zorder=0)
 ax1.axhline(y=0.9225, color='gray', linestyle='--', linewidth=0.7, alpha=0.5)
 ax1.axhline(y=0.8983, color='gray', linestyle='--', linewidth=0.7, alpha=0.5)
 
-ax1.set_xlabel('Circuit Index', fontsize=14, fontweight='bold')
-ax1.set_ylabel('Fidelity', fontsize=14, fontweight='bold')
+ax1.set_xlabel('Circuit Index', fontsize=12)
+ax1.set_ylabel('Fidelity', fontsize=12)
 ax1.set_ylim(0.4, 1.02)
 ax1.grid(True, alpha=0.2, linewidth=0.5)
 ax1.legend(loc='lower right', frameon=True, fancybox=False)
 
 # Subplot caption
 ax1.text(0.5, -0.3, '(a) 10 qubits', transform=ax1.transAxes, 
-         ha='center', fontsize=13)
+         ha='center', fontsize=13, fontweight='bold')
 
 # (b) 12 qubits
 all_fidelities_12 = np.zeros(100)
@@ -147,15 +147,15 @@ ax2.axhspan(0.8832, 0.9143, color=color_gap, alpha=0.7, zorder=0)
 ax2.axhline(y=0.9143, color='gray', linestyle='--', linewidth=0.7, alpha=0.5)
 ax2.axhline(y=0.8832, color='gray', linestyle='--', linewidth=0.7, alpha=0.5)
 
-ax2.set_xlabel('Circuit Index', fontsize=14, fontweight='bold')
-ax2.set_ylabel('Fidelity', fontsize=14, fontweight='bold')
+ax2.set_xlabel('Circuit Index', fontsize=12)
+ax2.set_ylabel('Fidelity', fontsize=12)
 ax2.set_ylim(0.4, 1.02)
 ax2.grid(True, alpha=0.2, linewidth=0.5)
 ax2.legend(loc='lower right', frameon=True, fancybox=False)
 
 # Subplot caption
 ax2.text(0.5, -0.3, '(b) 12 qubits', transform=ax2.transAxes, 
-         ha='center', fontsize=13)
+         ha='center', fontsize=13, fontweight='bold')
 
 # (c) 14 qubits
 all_fidelities_14 = np.zeros(100)
@@ -180,20 +180,23 @@ ax3.axhspan(0.8941, 0.9095, color=color_gap, alpha=0.7, zorder=0)
 ax3.axhline(y=0.9095, color='gray', linestyle='--', linewidth=0.7, alpha=0.5)
 ax3.axhline(y=0.8941, color='gray', linestyle='--', linewidth=0.7, alpha=0.5)
 
-ax3.set_xlabel('Circuit Index', fontsize=14, fontweight='bold')
-ax3.set_ylabel('Fidelity', fontsize=14, fontweight='bold')
+ax3.set_xlabel('Circuit Index', fontsize=12)
+ax3.set_ylabel('Fidelity', fontsize=12)
 ax3.set_ylim(0.3, 1.02)
 ax3.grid(True, alpha=0.2, linewidth=0.5)
 ax3.legend(loc='lower right', frameon=True, fancybox=False)
 
 # Subplot caption
 ax3.text(0.5, -0.3, '(c) 14 qubits', transform=ax3.transAxes, 
-         ha='center', fontsize=13)
+         ha='center', fontsize=13, fontweight='bold')
 
-plt.tight_layout()
+fig.subplots_adjust(hspace=0.5)
+
+#plt.tight_layout()
 
 # Save figure
 plt.savefig('figure_fidelity_separation_10_12_14_qubits.pdf', dpi=300, bbox_inches='tight')
-plt.savefig('figure_fidelity_separation_10_12_14_qubits.png', dpi=300, bbox_inches='tight')
+#plt.savefig('figure_fidelity_separation_10_12_14_qubits.png', dpi=300, bbox_inches='tight')
 
 plt.show()
+
