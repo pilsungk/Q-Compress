@@ -42,5 +42,5 @@ If you find this work useful, please cite our paper:
       eprint={2508.00484},
       archivePrefix={arXiv},
       primaryClass={quant-ph},
-      url={https://arxiv.org/abs/2508.00484}, 
+      url={https://arxiv.org/abs/2508.00484 }, 
 }
